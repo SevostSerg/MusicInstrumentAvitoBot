@@ -33,6 +33,7 @@ namespace AvitoMusicInstrumentsBot
         private TimeSpan _sessionTime;
         private readonly int _numberOfAdsAtOneCheck;
         private readonly int _threshold;
+        private DateTime _startOfLoop;
 
         public Test()
         {
@@ -54,6 +55,7 @@ namespace AvitoMusicInstrumentsBot
         {
             for (; ; )
             {
+                _startOfLoop = DateTime.Now;
                 _sessionTime = DateTime.Now - _startOfSession;
                 _oldCount = _currCount;
                 _numberOfLoop++;
@@ -84,7 +86,7 @@ namespace AvitoMusicInstrumentsBot
                             await AnalyzeRawAd(adInHTML).ConfigureAwait(false);
 
                         if (_currCount == _oldCount)
-                            Console.WriteLine($"No new adds, adds checked: {_currCount} Add buffer count: {_checkedAds.Count}");
+                            Console.WriteLine($"No new adds, adds checked: {_currCount} Time of this loop: {(DateTime.Now - _startOfLoop):hh\\:mm\\:ss}");
 
                         CleanCheckedList();
                     }
@@ -144,7 +146,8 @@ namespace AvitoMusicInstrumentsBot
 
         private void Sleep()
         {
-            Console.WriteLine($"Next at: {DateTime.Now.AddMicroseconds(_loopTimeout).TimeOfDay:hh\\:mm\\:ss}");
+            var loopTime = DateTime.Now - _startOfLoop;
+            Console.WriteLine($"Next at: {DateTime.Now.AddMicroseconds(_loopTimeout).TimeOfDay:hh\\:mm\\:ss}\nTime of this loop: {loopTime:hh\\:mm\\:ss\\:ms}");
             Thread.Sleep(_loopTimeout);
         }
     }
