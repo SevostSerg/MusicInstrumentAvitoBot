@@ -89,6 +89,7 @@ namespace AvitoMusicInstrumentsBot.InstrumentAnalyzers
                 {
                     var message = $"Title: {adInfo.Title}\nPrice: {adInfo.Price}\nLink: {adInfo.Link}";
                     await _bot.SendMessage(message).ConfigureAwait(false);
+                    AvitoTelegramBot.Avito.AutoMessenger.SendAvitoMessage(adInfo.Link);
                     AdsSended++;
                     _sendedMessagesLogger.LogInformation(message);
                 }

@@ -76,6 +76,11 @@ namespace AvitoMusicInstrumentsBot
                     Thread.Sleep(ErrorTimeout);
                     continue;
                 }
+                catch
+                {
+                    Thread.Sleep(ErrorTimeout);
+                    continue;
+                }
 
                 try
                 {
@@ -100,8 +105,6 @@ namespace AvitoMusicInstrumentsBot
 
 
                 Sleep();
-                if (_numberOfLoop % 10 == 0)
-                    GC.Collect();
             }
         }
 
