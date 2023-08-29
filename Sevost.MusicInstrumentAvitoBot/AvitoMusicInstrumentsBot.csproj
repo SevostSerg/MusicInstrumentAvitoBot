@@ -25,7 +25,7 @@
 		<Copy SourceFiles="ElectricGuitarSamples.txt" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="FolkSamples.txt" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="IDontCareSamples.txt" DestinationFolder="$(OutDir)" />
-		<Copy SourceFiles="UnwantedInfo.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles=".botIgnore" DestinationFolder="$(OutDir)" />
 
 		<Copy SourceFiles="BrandConfigurations/Ashtone.json" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="BrandConfigurations/CheapShit.json" DestinationFolder="$(OutDir)" />
