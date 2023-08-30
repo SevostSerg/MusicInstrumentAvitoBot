@@ -1,0 +1,46 @@
+﻿{
+  "DefaultPrice": 10000,
+  "ElectricModels": {
+    "Item1": [ "Affinity", "affinity", "аффинити", "Bullet", "bullet", "BULLET", "STRAT" ],
+    "Item2": 10000
+  },
+  "BassModels": {
+    "Item1": [
+      "Contemporary",
+      "contemporary",
+      "P-Bass",
+      "P-BASS",
+      "p-bass",
+      "PBASS",
+      "pbass",
+      "Precision",
+      "Pbass",
+      "precision",
+      "J-Bass",
+      "J-BASS",
+      "j-bass",
+      "JBASS",
+      "jbass",
+      "Jazz",
+      "jazz",
+      "Jbass",
+      "Japan",
+      "japan",
+      "Classic",
+      "classic"
+    ],
+    "Item2": 25000
+  },
+  "UkuleleModels": {
+    "Item1": [ "Ukulele", "ukulele", "кулел", "колел", "КАЛЕЛ", "КОЛЕЛ", "КУЛЕЛ", "КАЛЕЛ" ],
+    "Item2": 6000
+  },
+  "AcousticModels": {
+    "Item1": [ "Acoustic", "acoustic", "акустика", "Аккустика" ],
+    "Item2": 10000
+  },
+  "ClassicModels": {
+    "Item1": [ "Нейлон", "нейлон", "Классика", "классика", "классическая", "Классичкая", "с мягкими струнами" ],
+    "Item2": 6000
+  }
+}

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Sevost.MusicInstrumentAvitoBotAPI.Controllers
+namespace Sevost.AvitoBotAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

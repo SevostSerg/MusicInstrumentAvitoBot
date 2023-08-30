@@ -1,4 +1,4 @@
-namespace Sevost.MusicInstrumentAvitoBotAPI
+namespace Sevost.AvitoBotAPI
 {
     public class WeatherForecast
     {

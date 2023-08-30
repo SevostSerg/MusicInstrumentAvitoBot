@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>76f2e859-40dc-41f1-b26e-b04f66b94544</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sevost.MusicInstrumentAvitoBotLib\AvitoMusicInstrumentsBot.csproj" />
+  </ItemGroup>
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Copy SourceFiles=" $(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/AcousticGuitarSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BassGuitarSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/ChatIDs.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/ClassicGuitarSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/ElectricGuitarSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/FolkSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/IDontCareSamples.txt" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/.botIgnore" DestinationFolder="$(OutDir)" />
+
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Ashtone.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/CheapShit.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Cort.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Cremona.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Flight.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Hohner.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Ibanez.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Squier.json" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/BrandConfigurations/Yamaha.json" DestinationFolder="$(OutDir)" />
+
+		<Copy SourceFiles="$(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/AvitoMusicInstrumentsBotAPI.dll.config" DestinationFolder="$(OutDir)" />
+	</Target>
+	
+
+</Project>

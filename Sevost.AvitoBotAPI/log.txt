@@ -1,0 +1,47 @@
+2023-08-29 16:46:22.223 +03:00 [ERR] Value cannot be null. (Parameter 'pattern')
+2023-08-29 16:52:43.886 +03:00 [ERR] Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+2023-08-29 16:55:24.953 +03:00 [ERR] Value cannot be null. (Parameter 'pattern')
+2023-08-29 17:27:13.391 +03:00 [ERR] Invalid pattern 'div data-marker=\item\ data-item-id=' at offset 18. Unrecognized escape sequence \\i.
+2023-08-29 17:33:19.376 +03:00 [INF] Title: Обучение игре на гитаре (электро/акустика/бас)
+Price: 1500
+Link: 
+2023-08-29 17:44:25.177 +03:00 [INF] Title: Обучение игре на гитаре (электро/акустика/бас)
+Price: 1500
+Link: 
+2023-08-29 17:48:00.170 +03:00 [INF] Title: Обучение игре на гитаре (электро/акустика/бас)
+Price: 1500
+Link: 
+2023-08-29 18:17:12.215 +03:00 [INF] Title: Акустическая гитара
+Price: 2777
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_2727133926
+2023-08-29 18:27:29.471 +03:00 [INF] Title: Акустическая гитара
+Price: 2777
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_2727133926
+2023-08-29 18:29:06.791 +03:00 [INF] Title: Акустическая гитара
+Price: 2777
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_2727133926
+2023-08-29 18:29:17.922 +03:00 [INF] Title: Классическая гитара Veston C-50A
+Price: 5000
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/klassicheskaya_gitara_veston_c-50a_2854945412
+2023-08-29 18:31:33.910 +03:00 [INF] Title: Акустическая гитара
+Price: 2777
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_2727133926
+2023-08-29 18:31:45.087 +03:00 [INF] Title: Классическая гитара Veston C-50A
+Price: 5000
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/klassicheskaya_gitara_veston_c-50a_2854945412
+2023-08-29 18:34:20.048 +03:00 [ERR] Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+2023-08-29 18:39:39.875 +03:00 [INF] Title: Балалайка
+Price: 5500
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/balalayka_2317042803
+2023-08-29 18:42:40.141 +03:00 [INF] Title: Балалайка
+Price: 5500
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/balalayka_2317042803
+2023-08-29 18:44:20.934 +03:00 [INF] Title: Акустическая гитара с широким грифом
+Price: 3500
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_s_shirokim_grifom_2660493185
+2023-08-29 18:45:39.535 +03:00 [INF] Title: Акустическая гитара с широким грифом
+Price: 3500
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/akusticheskaya_gitara_s_shirokim_grifom_2660493185
+2023-08-29 18:45:55.525 +03:00 [INF] Title: Балалайка
+Price: 5500
+Link: https://www.avito.ru/moskva/muzykalnye_instrumenty/balalayka_2317042803
