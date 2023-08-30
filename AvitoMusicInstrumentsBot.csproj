@@ -10,11 +10,14 @@
   <ItemGroup>
     <PackageReference Include="IronOcr" Version="2023.8.34" />
     <PackageReference Include="IronOcr.Languages.Russian" Version="2020.11.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Serilog" Version="2.12.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.3-dev-00262" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
   </ItemGroup>
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
@@ -25,7 +28,7 @@
 		<Copy SourceFiles="ElectricGuitarSamples.txt" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="FolkSamples.txt" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="IDontCareSamples.txt" DestinationFolder="$(OutDir)" />
-		<Copy SourceFiles=".botIgnore" DestinationFolder="$(OutDir)" />
+		<Copy SourceFiles="UnwantedInfo.txt" DestinationFolder="$(OutDir)" />
 
 		<Copy SourceFiles="BrandConfigurations/Ashtone.json" DestinationFolder="$(OutDir)" />
 		<Copy SourceFiles="BrandConfigurations/CheapShit.json" DestinationFolder="$(OutDir)" />
