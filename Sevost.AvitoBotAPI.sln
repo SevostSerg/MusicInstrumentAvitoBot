@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sevost.AvitoBotAPI", "Sevost.AvitoBotAPI\Sevost.AvitoBotAPI.csproj", "{0E818E11-4C14-4FBA-B0C8-DDCC8CA5EDAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sevost.AvitoBot.API", "Sevost.AvitoBot.API\Sevost.AvitoBot.API.csproj", "{0E818E11-4C14-4FBA-B0C8-DDCC8CA5EDAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvitoBot.Core", "Sevost.MusicInstrumentAvitoBotLib\AvitoBot.Core.csproj", "{A9E10D34-762E-440F-A9ED-51B473BA82AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sevost.AvitoBot.Core", "Sevost.AvitoBot.Core\Sevost.AvitoBot.Core.csproj", "{A9E10D34-762E-440F-A9ED-51B473BA82AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvitoBot.Database", "AvitoBot.Database\AvitoBot.Database.csproj", "{3FD44DB8-6A44-4D8F-963C-5F687C6A026E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sevost.AvitoBot.Database", "Sevost.AvitoBot.Database\Sevost.AvitoBot.Database.csproj", "{3FD44DB8-6A44-4D8F-963C-5F687C6A026E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
