@@ -16,6 +16,10 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvitoBot.Database\AvitoBot.Database.csproj" />
+  </ItemGroup>
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
 		<Copy SourceFiles="AcousticGuitarSamples.txt" DestinationFolder="$(TargetDir)" />
 		<Copy SourceFiles="BassGuitarSamples.txt" DestinationFolder="$(TargetDir)" />

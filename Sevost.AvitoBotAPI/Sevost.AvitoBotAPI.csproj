@@ -10,13 +10,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sevost.MusicInstrumentAvitoBotLib\AvitoMusicInstrumentsBot.csproj" />
+    <ProjectReference Include="..\AvitoBot.Database\AvitoBot.Database.csproj" />
+    <ProjectReference Include="..\Sevost.MusicInstrumentAvitoBotLib\AvitoBot.Core.csproj" />
   </ItemGroup>
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
 		<Copy SourceFiles=" $(SolutionDir)Sevost.MusicInstrumentAvitoBotLib/AcousticGuitarSamples.txt" DestinationFolder="$(OutDir)" />

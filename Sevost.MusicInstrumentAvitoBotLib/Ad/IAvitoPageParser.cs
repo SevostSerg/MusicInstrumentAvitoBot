@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AvitoMusicInstrumentsBot.Ad
 {
     public interface IAvitoPageParser
     {
-        public string[] GetAdsBody(string input);
+        IEnumerable<string> GetAdsBody(string htmlString);
 
-        public string GetAdLink(string input);
+        string GetAdLink(string input, string locationAndCategoryLinkPart);
 
-        public int GetAddPrice(string input);
+        int GetAddPrice(string input);
 
-        public string GetAddTitle(string input);
+        string GetAddTitle(string input);
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -12,12 +14,11 @@ namespace AvitoMusicInstrumentsBot.Ad
         private readonly ILogger _logger;
         private const int _numberOfAdsToTake = 8;
         private const string ItemPropPattern = "itemProp=\"url\" href=\"";
-        private const string LinkPattern = "/moskva/muzykalnye_instrumenty/";
         private const string AvitoURL = "https://www.avito.ru";
         private const string TitlePattern = "title=\"Объявление «";
         private const string PricePattern = "itemProp=\"price\" content=\"";
 
-        public AvitoPageParser(ILogger<Bot> logger)
+        public AvitoPageParser(ILogger<CheckBotRoutine> logger)
         {
             _logger = logger;
         }
@@ -42,22 +43,24 @@ namespace AvitoMusicInstrumentsBot.Ad
             return items.Last().Split('»').First();
         }
 
-        public string GetAdLink(string input)
+        public string GetAdLink(string input, string locationAndCategoryLinkPart)
         {
             var items = Regex.Split(input, ItemPropPattern);
             // item example: ""/moskva/muzykalnye_instrumenty/predusilitel-tembroblok_s_effektami_cherub_gt-6_1062103951" target="_blank" title="Объявление «Предусилитель-т..."
-            var refString = DetectRefString(items);
+            var refString = DetectRefString(items, locationAndCategoryLinkPart);
             if (!refString.Equals(String.Empty))
                 return AvitoURL + refString.Split('"').First();
 
             return String.Empty;  //todo: redo 
         }
 
-        private string DetectRefString([NotNull]string[] items)
+        /// <param name="items"></param>
+        /// <param name="locationAndCategoryLinkPart">ex:/moskva/muzykalnye_instrumenty/</param>
+        private string DetectRefString(IEnumerable<string> items, string locationAndCategoryLinkPart)
         {
             foreach (var splitedItem in items)
             {
-                if (splitedItem.Contains(LinkPattern))
+                if (splitedItem.Contains(locationAndCategoryLinkPart))
                    return splitedItem;
             }
 
@@ -65,12 +68,11 @@ namespace AvitoMusicInstrumentsBot.Ad
         }
 
         /// <returns>Html code of every ad</returns>
-        public string[] GetAdsBody(string htmlString)
+        public IEnumerable<string> GetAdsBody(string htmlString)
         {
             try
             {
-                var ads = Regex.Split(htmlString, _pattern).ToList().GetRange(1, _numberOfAdsToTake); // hmmm...
-                return ads.ToArray();
+                return Regex.Split(htmlString, _pattern).ToList().GetRange(1, _numberOfAdsToTake); // hmmm...
             }
             catch (Exception ex)
             {
